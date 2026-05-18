@@ -47,6 +47,9 @@ task_metrics:
   bigbench_operators_generate_until: exact_match
   bigbench_repeat_copy_logic_generate_until: exact_match
   bigbench_cs_algorithms_generate_until: exact_match
+  xcopa:et: acc
+  xcopa:it: acc
+  xcopa:tr: acc
 
 task_groups:
   open-sci-0.01:
@@ -471,6 +474,19 @@ task_groups:
       # - task: jeopardy
       #   n_shots: [10]
       #   dataset: openaccess-ai-collective/jeopardy
+
+  xcopa-eu:
+    description: "XCOPA commonsense reasoning tasks (Turkish, Italian, Estonian)"
+    suite: lighteval
+    n_shots: [0]
+    dataset: cambridgeltl/xcopa
+    tasks:
+      - task: xcopa:et
+        subset: et
+      - task: xcopa:it
+        subset: it
+      - task: xcopa:tr
+        subset: tr
 
   reasoning:
     description: "Reasoning tasks: GSM8k (4-shot), IFEval (0-shot), MBPP (3-shot), GPQA-Diamond (0-shot), MATH500 (0-shot), LiveCodeBench (0-shot)"
