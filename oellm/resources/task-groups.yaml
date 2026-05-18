@@ -47,6 +47,37 @@ task_metrics:
   bigbench_operators_generate_until: exact_match
   bigbench_repeat_copy_logic_generate_until: exact_match
   bigbench_cs_algorithms_generate_until: exact_match
+  multiblimp_ces: acc
+  multiblimp_dan: acc
+  multiblimp_nld: acc
+  multiblimp_eng: acc
+  multiblimp_est: acc
+  multiblimp_fin: acc
+  multiblimp_fra: acc
+  multiblimp_deu: acc
+  multiblimp_ell: acc
+  multiblimp_hun: acc
+  multiblimp_gle: acc
+  multiblimp_ita: acc
+  multiblimp_lav: acc
+  multiblimp_lit: acc
+  multiblimp_pol: acc
+  multiblimp_por: acc
+  multiblimp_ron: acc
+  multiblimp_slk: acc
+  multiblimp_slv: acc
+  multiblimp_spa: acc
+  multiblimp_swe: acc
+  multiblimp_cat: acc
+  multiblimp_eus: acc
+  multiblimp_glg: acc
+  multiblimp_kat: acc
+  multiblimp_mkd: acc
+  multiblimp_sqi: acc
+  multiblimp_hbs: acc
+  multiblimp_tur: acc
+  multiblimp_ukr: acc
+  multiblimp_isl: acc
 
 task_groups:
   open-sci-0.01:
@@ -472,6 +503,75 @@ task_groups:
       #   n_shots: [10]
       #   dataset: openaccess-ai-collective/jeopardy
 
+  multiblimp-eu:
+    description: "MultiBLIMP grammaticality judgment benchmarks for European languages"
+    suite: lm-eval-harness
+    n_shots: [0]
+    dataset: jumelet/multiblimp
+    tasks:
+      - task: multiblimp_ces
+        subset: ces
+      - task: multiblimp_dan
+        subset: dan
+      - task: multiblimp_nld
+        subset: nld
+      - task: multiblimp_eng
+        subset: eng
+      - task: multiblimp_est
+        subset: est
+      - task: multiblimp_fin
+        subset: fin
+      - task: multiblimp_fra
+        subset: fra
+      - task: multiblimp_deu
+        subset: deu
+      - task: multiblimp_ell
+        subset: ell
+      - task: multiblimp_hun
+        subset: hun
+      - task: multiblimp_gle
+        subset: gle
+      - task: multiblimp_ita
+        subset: ita
+      - task: multiblimp_lav
+        subset: lav
+      - task: multiblimp_lit
+        subset: lit
+      - task: multiblimp_pol
+        subset: pol
+      - task: multiblimp_por
+        subset: por
+      - task: multiblimp_ron
+        subset: ron
+      - task: multiblimp_slk
+        subset: slk
+      - task: multiblimp_slv
+        subset: slv
+      - task: multiblimp_spa
+        subset: spa
+      - task: multiblimp_swe
+        subset: swe
+      - task: multiblimp_cat
+        subset: cat
+      - task: multiblimp_eus
+        subset: eus
+      - task: multiblimp_glg
+        subset: glg
+      - task: multiblimp_kat
+        subset: kat
+      - task: multiblimp_mkd
+        subset: mkd
+      - task: multiblimp_sqi
+        subset: sqi
+      - task: multiblimp_hbs
+        subset: hbs
+      - task: multiblimp_tur
+        subset: tur
+      - task: multiblimp_ukr
+        subset: ukr
+      - task: multiblimp_isl
+        subset: isl
+
   reasoning:
     description: "Reasoning tasks: GSM8k (4-shot), IFEval (0-shot), MBPP (3-shot), GPQA-Diamond (0-shot), MATH500 (0-shot), LiveCodeBench (0-shot)"
     suite: lm-eval-harness
@@ -508,3 +608,4 @@ super_groups:
       - task: mgsm-eu
       - task: generic-multilingual
       - task: include
+      - task: multiblimp-eu
