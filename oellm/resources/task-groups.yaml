@@ -47,37 +47,37 @@ task_metrics:
   bigbench_operators_generate_until: exact_match
   bigbench_repeat_copy_logic_generate_until: exact_match
   bigbench_cs_algorithms_generate_until: exact_match
-  multiblimp_ces: acc
-  multiblimp_dan: acc
-  multiblimp_nld: acc
-  multiblimp_eng: acc
-  multiblimp_est: acc
-  multiblimp_fin: acc
-  multiblimp_fra: acc
-  multiblimp_deu: acc
-  multiblimp_ell: acc
-  multiblimp_hun: acc
-  multiblimp_gle: acc
-  multiblimp_ita: acc
-  multiblimp_lav: acc
-  multiblimp_lit: acc
-  multiblimp_pol: acc
-  multiblimp_por: acc
-  multiblimp_ron: acc
-  multiblimp_slk: acc
-  multiblimp_slv: acc
-  multiblimp_spa: acc
-  multiblimp_swe: acc
-  multiblimp_cat: acc
-  multiblimp_eus: acc
-  multiblimp_glg: acc
-  multiblimp_kat: acc
-  multiblimp_mkd: acc
-  multiblimp_sqi: acc
-  multiblimp_hbs: acc
-  multiblimp_tur: acc
-  multiblimp_ukr: acc
-  multiblimp_isl: acc
+  multiblimp_ces: acc_norm
+  multiblimp_dan: acc_norm
+  multiblimp_nld: acc_norm
+  multiblimp_eng: acc_norm
+  multiblimp_est: acc_norm
+  multiblimp_fin: acc_norm
+  multiblimp_fra: acc_norm
+  multiblimp_deu: acc_norm
+  multiblimp_ell: acc_norm
+  multiblimp_hun: acc_norm
+  multiblimp_gle: acc_norm
+  multiblimp_ita: acc_norm
+  multiblimp_lav: acc_norm
+  multiblimp_lit: acc_norm
+  multiblimp_pol: acc_norm
+  multiblimp_por: acc_norm
+  multiblimp_ron: acc_norm
+  multiblimp_slk: acc_norm
+  multiblimp_slv: acc_norm
+  multiblimp_spa: acc_norm
+  multiblimp_swe: acc_norm
+  multiblimp_cat: acc_norm
+  multiblimp_eus: acc_norm
+  multiblimp_glg: acc_norm
+  multiblimp_kat: acc_norm
+  multiblimp_mkd: acc_norm
+  multiblimp_sqi: acc_norm
+  multiblimp_hbs: acc_norm
+  multiblimp_tur: acc_norm
+  multiblimp_ukr: acc_norm
+  multiblimp_isl: acc_norm
 
 task_groups:
   open-sci-0.01:
