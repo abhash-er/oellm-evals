@@ -47,6 +47,56 @@ task_metrics:
   bigbench_operators_generate_until: exact_match
   bigbench_repeat_copy_logic_generate_until: exact_match
   bigbench_cs_algorithms_generate_until: exact_match
+  opensubtitles_multi40_en_to_bg: bleu
+  opensubtitles_multi40_en_to_hr: bleu
+  opensubtitles_multi40_en_to_cs: bleu
+  opensubtitles_multi40_en_to_da: bleu
+  opensubtitles_multi40_en_to_nl: bleu
+  opensubtitles_multi40_en_to_et: bleu
+  opensubtitles_multi40_en_to_fi: bleu
+  opensubtitles_multi40_en_to_fr: bleu
+  opensubtitles_multi40_en_to_de: bleu
+  opensubtitles_multi40_en_to_el: bleu
+  opensubtitles_multi40_en_to_hu: bleu
+  opensubtitles_multi40_en_to_it: bleu
+  opensubtitles_multi40_en_to_lv: bleu
+  opensubtitles_multi40_en_to_lt: bleu
+  opensubtitles_multi40_en_to_pl: bleu
+  opensubtitles_multi40_en_to_pt: bleu
+  opensubtitles_multi40_en_to_ro: bleu
+  opensubtitles_multi40_en_to_sk: bleu
+  opensubtitles_multi40_en_to_sl: bleu
+  opensubtitles_multi40_en_to_es: bleu
+  opensubtitles_multi40_en_to_sv: bleu
+  opensubtitles_multi40_en_to_sr: bleu
+  opensubtitles_multi40_en_to_tr: bleu
+  opensubtitles_multi40_en_to_uk: bleu
+  opensubtitles_multi40_en_to_no: bleu
+  opensubtitles_multi40_bg_to_en: bleu
+  opensubtitles_multi40_hr_to_en: bleu
+  opensubtitles_multi40_cs_to_en: bleu
+  opensubtitles_multi40_da_to_en: bleu
+  opensubtitles_multi40_nl_to_en: bleu
+  opensubtitles_multi40_et_to_en: bleu
+  opensubtitles_multi40_fi_to_en: bleu
+  opensubtitles_multi40_fr_to_en: bleu
+  opensubtitles_multi40_de_to_en: bleu
+  opensubtitles_multi40_el_to_en: bleu
+  opensubtitles_multi40_hu_to_en: bleu
+  opensubtitles_multi40_it_to_en: bleu
+  opensubtitles_multi40_lv_to_en: bleu
+  opensubtitles_multi40_lt_to_en: bleu
+  opensubtitles_multi40_pl_to_en: bleu
+  opensubtitles_multi40_pt_to_en: bleu
+  opensubtitles_multi40_ro_to_en: bleu
+  opensubtitles_multi40_sk_to_en: bleu
+  opensubtitles_multi40_sl_to_en: bleu
+  opensubtitles_multi40_es_to_en: bleu
+  opensubtitles_multi40_sv_to_en: bleu
+  opensubtitles_multi40_sr_to_en: bleu
+  opensubtitles_multi40_tr_to_en: bleu
+  opensubtitles_multi40_uk_to_en: bleu
+  opensubtitles_multi40_no_to_en: bleu
 
 task_groups:
   open-sci-0.01:
@@ -496,6 +546,68 @@ task_groups:
         n_shots: [0]
         suite: evalchemy
         dataset: livecodebench/code_generation_lite
+  opensubtitles-eu-en-xx:
+    description: "OpenSubtitles Multi40 translation: English to 25 European languages (Helsinki-NLP/OpenSubtitles2024-40-langs-15-movies, 0-shot)"
+    suite: lm-eval-harness
+    n_shots: [0]
+    dataset: Helsinki-NLP/OpenSubtitles2024-40-langs-15-movies
+    tasks:
+      - task: opensubtitles_multi40_en_to_bg
+      - task: opensubtitles_multi40_en_to_hr
+      - task: opensubtitles_multi40_en_to_cs
+      - task: opensubtitles_multi40_en_to_da
+      - task: opensubtitles_multi40_en_to_nl
+      - task: opensubtitles_multi40_en_to_et
+      - task: opensubtitles_multi40_en_to_fi
+      - task: opensubtitles_multi40_en_to_fr
+      - task: opensubtitles_multi40_en_to_de
+      - task: opensubtitles_multi40_en_to_el
+      - task: opensubtitles_multi40_en_to_hu
+      - task: opensubtitles_multi40_en_to_it
+      - task: opensubtitles_multi40_en_to_lv
+      - task: opensubtitles_multi40_en_to_lt
+      - task: opensubtitles_multi40_en_to_pl
+      - task: opensubtitles_multi40_en_to_pt
+      - task: opensubtitles_multi40_en_to_ro
+      - task: opensubtitles_multi40_en_to_sk
+      - task: opensubtitles_multi40_en_to_sl
+      - task: opensubtitles_multi40_en_to_es
+      - task: opensubtitles_multi40_en_to_sv
+      - task: opensubtitles_multi40_en_to_sr
+      - task: opensubtitles_multi40_en_to_tr
+      - task: opensubtitles_multi40_en_to_uk
+      - task: opensubtitles_multi40_en_to_no
+  opensubtitles-eu-xx-en:
+    description: "OpenSubtitles Multi40 translation: 25 European languages to English (Helsinki-NLP/OpenSubtitles2024-40-langs-15-movies, 0-shot)"
+    suite: lm-eval-harness
+    n_shots: [0]
+    dataset: Helsinki-NLP/OpenSubtitles2024-40-langs-15-movies
+    tasks:
+      - task: opensubtitles_multi40_bg_to_en
+      - task: opensubtitles_multi40_hr_to_en
+      - task: opensubtitles_multi40_cs_to_en
+      - task: opensubtitles_multi40_da_to_en
+      - task: opensubtitles_multi40_nl_to_en
+      - task: opensubtitles_multi40_et_to_en
+      - task: opensubtitles_multi40_fi_to_en
+      - task: opensubtitles_multi40_fr_to_en
+      - task: opensubtitles_multi40_de_to_en
+      - task: opensubtitles_multi40_el_to_en
+      - task: opensubtitles_multi40_hu_to_en
+      - task: opensubtitles_multi40_it_to_en
+      - task: opensubtitles_multi40_lv_to_en
+      - task: opensubtitles_multi40_lt_to_en
+      - task: opensubtitles_multi40_pl_to_en
+      - task: opensubtitles_multi40_pt_to_en
+      - task: opensubtitles_multi40_ro_to_en
+      - task: opensubtitles_multi40_sk_to_en
+      - task: opensubtitles_multi40_sl_to_en
+      - task: opensubtitles_multi40_es_to_en
+      - task: opensubtitles_multi40_sv_to_en
+      - task: opensubtitles_multi40_sr_to_en
+      - task: opensubtitles_multi40_tr_to_en
+      - task: opensubtitles_multi40_uk_to_en
+      - task: opensubtitles_multi40_no_to_en
 
 super_groups:
   oellm-multilingual:
